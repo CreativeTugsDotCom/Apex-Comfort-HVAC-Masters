@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Comfort HVAC Masters | Katy, TX HVAC Contractor</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            navy: '#0a192f',
+                            ice: '#f8fafc',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar & smooth polish */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0284c7;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0369a1;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(10, 25, 47, 0.75), rgba(12, 74, 110, 0.85)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .cta-banner-bg {
+            background: linear-gradient(135deg, #0c4a6e 0%, #0284c7 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-ice text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot text-brand-400 mr-1.5"></i> 4109 Katy Hockley Rd, Katy, TX 77493</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-brand-400 mr-1.5"></i> Open 24 Hours</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="flex items-center text-amber-400 font-medium">
+                    <i class="fa-solid fa-star mr-1"></i> 5.0 Rating (2 Google Reviews)
+                </span>
+                <a href="tel:3463611563" class="hover:text-brand-300 font-semibold transition"><i class="fa-solid fa-phone text-brand-400 mr-1"></i> (346) 361-1563</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <header id="navbar" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white shadow-md shadow-brand-500/30 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-snowflake text-xl animate-spin" style="animation-duration: 12s;"></i>
+                </div>
+                <div>
+                    <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-navy block leading-tight">Apex Comfort</span>
+                    <span class="text-xs font-semibold tracking-wider text-brand-600 uppercase">HVAC Masters • Katy, TX</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+                <a href="#home" class="hover:text-brand-600 transition">Home</a>
+                <a href="#about" class="hover:text-brand-600 transition">About</a>
+                <a href="#services" class="hover:text-brand-600 transition">Services</a>
+                <a href="#why-us" class="hover:text-brand-600 transition">Why Choose Us</a>
+                <a href="#reviews" class="hover:text-brand-600 transition">Reviews</a>
+                <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+            </nav>
+
+            <!-- Header CTA -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:3463611563" class="flex items-center gap-3 bg-brand-50 text-brand-700 px-4 py-2.5 rounded-xl font-bold hover:bg-brand-100 transition border border-brand-200">
+                    <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center">
+                        <i class="fa-solid fa-phone text-sm"></i>
+                    </div>
+                    <div class="text-left leading-tight">
+                        <span class="text-[10px] uppercase font-semibold text-brand-500 block">Emergency 24/7</span>
+                        <span class="text-sm font-extrabold">(346) 361-1563</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-brand-600 p-2 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="block py-2 font-medium text-slate-700 hover:text-brand-600 border-b border-slate-50">Home</a>
+            <a href="#about" class="block py-2 font-medium text-slate-700 hover:text-brand-600 border-b border-slate-50">About</a>
+            <a href="#services" class="block py-2 font-medium text-slate-700 hover:text-brand-600 border-b border-slate-50">Services</a>
+            <a href="#why-us" class="block py-2 font-medium text-slate-700 hover:text-brand-600 border-b border-slate-50">Why Choose Us</a>
+            <a href="#reviews" class="block py-2 font-medium text-slate-700 hover:text-brand-600 border-b border-slate-50">Reviews</a>
+            <a href="#contact" class="block py-2 font-medium text-slate-700 hover:text-brand-600">Contact</a>
+            <div class="pt-2">
+                <a href="tel:3463611563" class="w-full flex items-center justify-center gap-2 bg-brand-600 text-white py-3 rounded-xl font-bold shadow-lg shadow-brand-600/30">
+                    <i class="fa-solid fa-phone"></i> Call (346) 361-1563
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white relative min-h-[90vh] flex items-center py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-brand-200 text-sm font-semibold animate-pulse">
+                    <i class="fa-solid fa-shield-halved text-brand-400"></i> Licensed & Trusted Katy HVAC Contractor
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                    Your Comfort, Our Priority — <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-cyan-300">24/7 HVAC Experts</span> in Katy, TX
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200 font-light leading-relaxed max-w-2xl">
+                    Professional heating, cooling, installation, maintenance, and repair services to keep your home or business comfortable all year round. Fast response across Katy and surrounding areas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="tel:3463611563" class="bg-brand-500 hover:bg-brand-400 text-white px-8 py-4 rounded-xl font-bold text-center shadow-xl shadow-brand-500/40 transition flex items-center justify-center gap-3 group text-lg">
+                        <i class="fa-solid fa-phone group-hover:rotate-12 transition"></i> Call Now: (346) 361-1563
+                    </a>
+                    <a href="#booking" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-md px-8 py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-regular fa-calendar-days text-brand-300"></i> Request Free Consultation
+                    </a>
+                </div>
+
+                <!-- Floating Badges / Stats -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-brand-500/20 border border-brand-400/30 flex items-center justify-center text-brand-300">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-base">24/7 Service</span>
+                            <span class="text-xs text-slate-300">Always Available</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/20 border border-amber-400/30 flex items-center justify-center text-amber-300">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-base">5.0 Google Rating</span>
+                            <span class="text-xs text-slate-300">Verified Reviews</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 col-span-2 sm:col-span-1">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-300">
+                            <i class="fa-solid fa-map-pin"></i>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-base">Katy, TX</span>
+                            <span class="text-xs text-slate-300">& Surrounding Areas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Booking Card in Hero -->
+            <div class="lg:col-span-5">
+                <div class="bg-white/95 backdrop-blur-xl p-6 sm:p-8 rounded-3xl shadow-2xl text-slate-800 border border-white/40 relative">
+                    <div class="absolute -top-4 -right-4 bg-brand-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg uppercase tracking-wider">
+                        Fast Response
+                    </div>
+                    <h3 class="text-2xl font-extrabold text-brand-navy mb-2">Need HVAC Service?</h3>
+                    <p class="text-sm text-slate-600 mb-6">Schedule an appointment or reach our emergency dispatch team instantly.</p>
+                    
+                    <form onsubmit="handleQuickSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Your Full Name</label>
+                            <input type="text" id="quickName" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                            <input type="tel" id="quickPhone" required placeholder="(346) 000-0000" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Service Needed</label>
+                            <select id="quickService" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm bg-white">
+                                <option value="AC Repair">AC Repair & Troubleshooting</option>
+                                <option value="AC Installation">Air Conditioning Installation</option>
+                                <option value="Heating Repair">Heating System Repair</option>
+                                <option value="Maintenance">HVAC Maintenance & Tune-Up</option>
+                                <option value="Thermostat">Thermostat Repair/Replacement</option>
+                                <option value="Commercial">Commercial HVAC</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-brand-600/30 transition text-base">
+                            Request Expert Service
+                        </button>
+                    </form>
+                    <div id="quickSuccess" class="hidden mt-4 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm text-center font-medium">
+                        <i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Request received! We will call you back immediately.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-6 relative">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1000&q=80" alt="Professional HVAC Technician at work" class="w-full h-[480px] object-cover hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/800x600/0284c7/ffffff?text=Apex+Comfort+HVAC';">
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-brand-navy text-white p-6 rounded-2xl shadow-2xl hidden sm:block border border-white/10 max-w-xs">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-award text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="block font-extrabold text-lg">Top Quality</span>
+                            <span class="text-xs text-brand-300">Dependable Solutions</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-300">Delivering reliable heating, cooling, and maintenance for Katy homes & businesses.</p>
+                </div>
+            </div>
+            <div class="lg:col-span-6 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-700 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-200">
+                    <i class="fa-solid fa-house-chimney text-brand-600"></i> About Apex Comfort HVAC Masters
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+                    Your Trusted Heating & Cooling Professionals in Katy, TX
+                </h2>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    At <strong>Apex Comfort HVAC Masters</strong>, located at 4109 Katy Hockley Rd, we pride ourselves on providing top-tier heating, ventilation, and air conditioning services for residential and commercial clients across Katy and surrounding areas.
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Texas weather can be unforgiving. Whether you need an emergency AC repair during the scorching summer heat, a routine seasonal tune-up, precision thermostat troubleshooting, or a complete system installation, our expert technicians are available 24 hours a day, 7 days a week to ensure your indoor environment remains perfectly comfortable.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-brand-50/50 border border-brand-100">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-check text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Residential & Commercial</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Full scope HVAC services for homes and local businesses.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-4 rounded-2xl bg-brand-50/50 border border-brand-100">
+                        <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-check text-sm"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">24/7 Emergency Dispatch</h4>
+                            <p class="text-xs text-slate-600 mt-0.5">Here for you day or night whenever breakdowns happen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex items-center gap-6">
+                    <a href="tel:3463611563" class="bg-brand-navy hover:bg-brand-800 text-white px-7 py-3.5 rounded-xl font-bold transition shadow-lg flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-brand-400"></i> Speak With An Expert
+                    </a>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="font-bold text-sm text-slate-800">5.0 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-brand-ice">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-700 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-200">
+                    Comprehensive HVAC Solutions
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+                    Our Professional Services
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    From urgent AC repairs to complete installation and routine maintenance, we keep your heating and cooling systems operating at peak efficiency.
+                </p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80" alt="AC Repair" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=AC+Repair';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">AC Repair</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">AC Repair & Troubleshooting</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Fast, accurate diagnostics and expert repair for all air conditioning makes and models to restore cooling instantly.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('AC Repair')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Schedule Service</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Air Conditioning Installation -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Air Conditioning Installation" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=AC+Installation';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">Installation</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">Air Conditioning Installation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">High-efficiency cooling system installations designed specifically for Texas home layouts and maximum energy savings.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('AC Installation')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Request Estimate</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Heating System Repair" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Heating+Repair';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">Heating</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">Heating System Repair</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Dependable heater and furnace diagnostics, repairs, and tune-ups to keep your home warm during chilly Texas winter nights.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('Heating Repair')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Schedule Service</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Maintenance" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=HVAC+Maintenance';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">Maintenance</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">HVAC Maintenance & Tune-Ups</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Comprehensive tune-ups that ensure smoother operation, quieter performance, extended equipment lifespan, and lower utility bills.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('Maintenance')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Book Tune-Up</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Thermostat Repair & Replacement -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=600&q=80" alt="Thermostat Repair & Replacement" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Smart+Thermostat';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">Smart Controls</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">Thermostat Repair & Replacement</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Expert repair of thermostat wiring (including wall damage fixes), sensor testing, and modern smart thermostat upgrades.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('Thermostat')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Learn More</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 border border-slate-100 flex flex-col group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Commercial HVAC" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Commercial+HVAC';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent"></div>
+                        <span class="absolute bottom-3 left-4 text-white font-bold text-sm bg-brand-600/90 px-3 py-1 rounded-lg backdrop-blur-sm">Commercial</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-brand-navy mb-2 group-hover:text-brand-600 transition">Residential & Commercial HVAC</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Tailored commercial and residential climate control solutions, outdoor unit relocation, duct inspections, and emergency support.</p>
+                        </div>
+                        <a href="#booking" onclick="setServiceDropdown('Commercial')" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition pt-2">
+                            <span>Get Consultation</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-50 text-brand-700 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-200">
+                    The Apex Standard
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+                    Why Choose Apex Comfort HVAC Masters?
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    We combine technical mastery, prompt responsiveness, and genuine customer care for every job we undertake.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-brand-ice p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-600/30 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">24/7 Availability</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Heating and cooling emergencies don't wait for business hours. Our team is open 24 hours to help you whenever needed.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-brand-ice p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-600/30 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Professional Solutions</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Expert diagnostics and skilled repairs—from complex thermostat wiring issues to outdoor unit relocations and precision tune-ups.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-brand-ice p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-600/30 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-temperature-arrow-down"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Reliable Climate Control</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Ensure your systems run smoother, quieter, and more efficiently with our proven maintenance and service protocols.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-brand-ice p-8 rounded-3xl border border-slate-100 hover:shadow-xl transition duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-600/30 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-face-smile-beam"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-brand-navy mb-3">Customer-Focused</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Backed by a 5.0-star Google rating, we treat every client with integrity, clear communication, and transparent pricing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="py-24 px-4 sm:px-6 lg:px-8 bg-brand-navy text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-500/20 text-brand-300 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-400/30">
+                    Verified Google Reviews
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    What Our Customers Say
+                </h2>
+                <div class="flex items-center justify-center gap-3 pt-2">
+                    <div class="flex text-amber-400 text-lg">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <span class="text-xl font-bold text-white">5.0 / 5.0 Rating</span>
+                    <span class="text-slate-400 text-sm">(2 Google Reviews)</span>
+                </div>
+            </div>
+
+            <!-- Testimonial Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Review 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/15 flex flex-col justify-between shadow-2xl relative">
+                    <div class="absolute top-6 right-8 text-brand-400 text-4xl opacity-40">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 text-base sm:text-lg italic leading-relaxed mb-6">
+                            "The system runs smoother and quieter after the tune-up. They also successfully handled the relocation of our outdoor unit with incredible precision and professionalism."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                        <div class="w-12 h-12 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-lg shadow-md">
+                            MJ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Michael James</h4>
+                            <span class="text-xs text-brand-300">Verified Google Review • Tune-Up & Relocation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/15 flex flex-col justify-between shadow-2xl relative">
+                    <div class="absolute top-6 right-8 text-brand-400 text-4xl opacity-40">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div>
+                        <div class="flex text-amber-400 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-200 text-base sm:text-lg italic leading-relaxed mb-6">
+                            "Our AC kept malfunctioning unpredictably. The technician skillfully identified thermostat wiring that had been damaged by a mouse inside the wall. Fixed right away!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+                        <div class="w-12 h-12 rounded-full bg-brand-500 text-white font-bold flex items-center justify-center text-lg shadow-md">
+                            EC
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Evans Charles</h4>
+                            <span class="text-xs text-brand-300">Verified Google Review • Thermostat & Wiring Repair</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency CTA Banner -->
+    <section class="cta-banner-bg py-16 px-4 sm:px-6 lg:px-8 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left relative z-10">
+            <div class="space-y-3">
+                <span class="bg-white/10 text-brand-200 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    24/7 Emergency Dispatch
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    Heating or Cooling Problems? We're Available 24/7!
+                </h2>
+                <p class="text-slate-200 text-base max-w-2xl">
+                    Get dependable HVAC assistance in Katy, TX whenever you need it. Fast dispatch, honest quotes, and superior craftsmanship.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 shrink-0">
+                <a href="tel:3463611563" class="bg-white text-brand-900 hover:bg-brand-50 px-8 py-4 rounded-xl font-bold text-center shadow-2xl transition flex items-center justify-center gap-2 text-lg">
+                    <i class="fa-solid fa-phone text-brand-600"></i> Call (346) 361-1563
+                </a>
+                <a href="#booking" class="bg-brand-600 hover:bg-brand-700 text-white border border-brand-400/40 px-8 py-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 text-lg">
+                    <i class="fa-regular fa-calendar-days"></i> Schedule Service
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Service / Booking Section -->
+    <section id="booking" class="py-24 px-4 sm:px-6 lg:px-8 bg-brand-ice">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-700 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-200">
+                    Book Online Today
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+                    Request an Appointment or Free Consultation
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Fill out the form below or pick your preferred date and time on our interactive calendar mockup.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Appointment Calendar Mockup -->
+                <div class="lg:col-span-5 bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
+                    <h3 class="text-xl font-bold text-brand-navy mb-4 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-days text-brand-600"></i> Select Preferred Date
+                    </h3>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="font-bold text-slate-800 text-base" id="calendarMonth">October 2026</span>
+                            <div class="flex gap-2">
+                                <button onclick="changeMonth(-1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-100 hover:text-brand-600 flex items-center justify-center transition"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button onclick="changeMonth(1)" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-brand-100 hover:text-brand-600 flex items-center justify-center transition"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center text-xs font-bold text-slate-400 mb-2">
+                            <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                        </div>
+                        <div id="calendarDays" class="grid grid-cols-7 gap-1 text-center text-sm">
+                            <!-- Populated via JS -->
+                        </div>
+                    </div>
+                    <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 text-xs text-slate-700 space-y-1">
+                        <div class="font-bold text-brand-900 mb-1"><i class="fa-solid fa-circle-info text-brand-600 mr-1"></i> Quick Note:</div>
+                        <p>Selected Date: <span id="selectedDateDisplay" class="font-bold text-brand-700">Today</span></p>
+                        <p class="text-slate-500">We confirm all appointments within 30 minutes via phone call.</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl shadow-xl border border-slate-100">
+                    <h3 class="text-2xl font-extrabold text-brand-navy mb-6">Service Request Form</h3>
+                    <form onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Full Name *</label>
+                                <input type="text" id="bookName" required placeholder="Jane Smith" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Phone Number *</label>
+                                <input type="tel" id="bookPhone" required placeholder="(346) 000-0000" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Email Address</label>
+                                <input type="email" id="bookEmail" placeholder="jane@example.com" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Service Required *</label>
+                                <select id="bookService" class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm bg-white">
+                                    <option value="AC Repair">AC Repair & Troubleshooting</option>
+                                    <option value="AC Installation">Air Conditioning Installation</option>
+                                    <option value="Heating Repair">Heating System Repair</option>
+                                    <option value="Maintenance">HVAC Maintenance & Tune-Up</option>
+                                    <option value="Thermostat">Thermostat Repair/Replacement</option>
+                                    <option value="Commercial">Commercial HVAC Services</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Describe Your HVAC Issue or Request</label>
+                            <textarea id="bookMessage" rows="4" placeholder="Please share any details about your AC, heater, or appointment timing..." class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none transition text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-xl shadow-brand-600/30 transition text-base">
+                            Submit Service Request
+                        </button>
+                    </form>
+                    <div id="bookingSuccess" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl text-sm text-center font-medium">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-2"></i> Thank you! Your request has been sent successfully. Our Katy dispatch team will call you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-50 text-brand-700 px-3.5 py-1.5 rounded-full font-semibold text-xs uppercase tracking-wider border border-brand-200">
+                    Get In Touch
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+                    Contact & Location
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Visit or contact Apex Comfort HVAC Masters in Katy, Texas anytime.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-brand-ice p-8 rounded-3xl border border-slate-100 space-y-6 shadow-sm">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase font-bold text-slate-400 mb-1">Business Name</h4>
+                                <p class="font-extrabold text-brand-navy text-lg">Apex Comfort HVAC Masters</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase font-bold text-slate-400 mb-1">Address</h4>
+                                <p class="font-bold text-brand-navy text-base">4109 Katy Hockley Rd,<br>Katy, TX 77493, United States</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase font-bold text-slate-400 mb-1">Phone Number</h4>
+                                <a href="tel:3463611563" class="font-bold text-brand-600 hover:underline text-lg">+1 (346) 361-1563</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs uppercase font-bold text-slate-400 mb-1">Hours</h4>
+                                <p class="font-bold text-brand-navy text-base">Open 24 Hours / 7 Days a Week</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                            <a href="tel:3463611563" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white py-3 px-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 text-sm shadow-md">
+                                <i class="fa-solid fa-phone"></i> Click To Call
+                            </a>
+                            <a href="https://maps.google.com/?q=4109+Katy+Hockley+Rd+Katy+TX+77493" target="_blank" class="flex-1 bg-white hover:bg-slate-50 text-brand-700 border border-brand-200 py-3 px-4 rounded-xl font-bold text-center transition flex items-center justify-center gap-2 text-sm">
+                                <i class="fa-solid fa-directions text-brand-600"></i> Get Directions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed Column -->
+                <div class="lg:col-span-7 h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <iframe 
+                        title="Apex Comfort HVAC Masters Location"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3463.8524021235!2d-95.8365!3d29.8395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8641210000000001%3A0x7d2e35a1a1a1a1!2s4109%20Katy%20Hockley%20Rd%2C%20Katy%2C%20TX%2077493!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="bg-brand-navy text-slate-300 pt-16 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <!-- Col 1: Brand -->
+            <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white shadow-md">
+                        <i class="fa-solid fa-snowflake text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-white block leading-tight">Apex Comfort</span>
+                        <span class="text-xs font-semibold tracking-wider text-brand-400 uppercase">HVAC Masters</span>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    Professional heating, ventilation, and air conditioning contractor based in Katy, Texas. Providing dependable residential and commercial service 24 hours a day.
+                </p>
+                <div class="flex items-center gap-3 pt-2 text-amber-400 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="text-white font-bold ml-1">5.0 / 5.0 Rating</span>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div>
+                <h4 class="text-white font-bold text-base mb-4 uppercase tracking-wider text-xs">Quick Navigation</h4>
+                <ul class="space-y-2.5 text-sm">
+                    <li><a href="#home" class="hover:text-brand-400 transition">Home</a></li>
+                    <li><a href="#about" class="hover:text-brand-400 transition">About Us</a></li>
+                    <li><a href="#services" class="hover:text-brand-400 transition">Our Services</a></li>
+                    <li><a href="#why-us" class="hover:text-brand-400 transition">Why Choose Us</a></li>
+                    <li><a href="#reviews" class="hover:text-brand-400 transition">Customer Reviews</a></li>
+                    <li><a href="#contact" class="hover:text-brand-400 transition">Contact & Location</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Services -->
+            <div>
+                <h4 class="text-white font-bold text-base mb-4 uppercase tracking-wider text-xs">HVAC Services</h4>
+                <ul class="space-y-2.5 text-sm text-slate-400">
+                    <li>AC Repair & Troubleshooting</li>
+                    <li>Air Conditioning Installation</li>
+                    <li>Heating System Repair</li>
+                    <li>HVAC Maintenance & Tune-Ups</li>
+                    <li>Thermostat Repair & Replacement</li>
+                    <li>Residential & Commercial HVAC</li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact details -->
+            <div class="space-y-3">
+                <h4 class="text-white font-bold text-base mb-4 uppercase tracking-wider text-xs">Contact Info</h4>
+                <p class="text-sm text-slate-400"><i class="fa-solid fa-location-dot text-brand-400 mr-2"></i> 4109 Katy Hockley Rd, Katy, TX 77493</p>
+                <p class="text-sm text-slate-400"><i class="fa-solid fa-phone text-brand-400 mr-2"></i> <a href="tel:3463611563" class="hover:text-white font-semibold">(346) 361-1563</a></p>
+                <p class="text-sm text-slate-400"><i class="fa-solid fa-clock text-brand-400 mr-2"></i> Open 24 Hours</p>
+                <div class="pt-2">
+                    <a href="tel:3463611563" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold text-sm px-4 py-2.5 rounded-xl shadow-lg transition">
+                        <i class="fa-solid fa-phone"></i> Emergency Dispatch
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Apex Comfort HVAC Masters. All rights reserved. Katy, TX.</p>
+            <p>Professional Heating & Cooling Services • Available 24/7</p>
+        </div>
+    </footer>
+
+    <!-- Floating Mobile Call Button -->
+    <a href="tel:3463611563" class="lg:hidden fixed bottom-6 right-6 z-40 bg-brand-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl hover:bg-brand-500 transition animate-bounce">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Quick Form Submission
+        function handleQuickSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('quickName').value;
+            const phone = document.getElementById('quickPhone').value;
+            const service = document.getElementById('quickService').value;
+            
+            document.getElementById('quickSuccess').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('quickSuccess').classList.add('hidden');
+                e.target.reset();
+            }, 5000);
+        }
+
+        // Booking Form Submission
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            document.getElementById('bookingSuccess').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('bookingSuccess').classList.add('hidden');
+                e.target.reset();
+            }, 6000);
+        }
+
+        // Pre-select service dropdown when clicking service card links
+        function setServiceDropdown(serviceName) {
+            const selectEl = document.getElementById('bookService');
+            if (selectEl) {
+                for (let i = 0; i < selectEl.options.length; i++) {
+                    if (selectEl.options[i].value === serviceName || selectEl.options[i].text.includes(serviceName)) {
+                        selectEl.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Interactive Calendar Mockup
+        let currentDate = new Date(2026, 9, 13); // October 2026
+        let selectedDay = 13;
+
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            document.getElementById('calendarMonth').innerText = monthNames[month] + " " + year;
+
+            const firstDayIndex = new Date(year, month, 1).getDay();
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            const daysContainer = document.getElementById('calendarDays');
+            daysContainer.innerHTML = "";
+
+            // Blank spaces for previous month offset
+            for (let i = 0; i < firstDayIndex; i++) {
+                const emptyDiv = document.createElement('div');
+                daysContainer.appendChild(emptyDiv);
+            }
+
+            // Days of the month
+            for (let d = 1; d <= totalDays; d++) {
+                const dayBtn = document.createElement('button');
+                dayBtn.type = 'button';
+                dayBtn.innerText = d;
+                dayBtn.className = "h-9 w-9 mx-auto rounded-xl font-medium text-sm flex items-center justify-center transition ";
+                
+                if (d === selectedDay && month === 9 && year === 2026) {
+                    dayBtn.className += "bg-brand-600 text-white shadow-md font-bold";
+                } else {
+                    dayBtn.className += "hover:bg-brand-100 text-slate-700";
+                }
+
+                dayBtn.addEventListener('click', () => {
+                    selectedDay = d;
+                    document.getElementById('selectedDateDisplay').innerText = monthNames[month] + " " + d + ", " + year;
+                    renderCalendar();
+                });
+
+                daysContainer.appendChild(dayBtn);
+            }
+        }
+
+        function changeMonth(direction) {
+            currentDate.setMonth(currentDate.getMonth() + direction);
+            renderCalendar();
+        }
+
+        // Initialize calendar on load
+        window.onload = function() {
+            renderCalendar();
+        };
+    </script>
+</body>
+</html>
